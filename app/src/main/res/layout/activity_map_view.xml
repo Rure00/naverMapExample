@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="30dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/modeChangeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/btn_blue"
+        android:text="사당 보기"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:layout_gravity="center"/>
+
+        <EditText
+        android:id="@+id/searchText"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:hint="검색어 입력"
+        />
+
+        <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/searchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/btn_blue"
+        android:text="검색"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+
+        android:padding="10dp"
+        android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+    <fragment xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:name="com.naver.maps.map.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        app:navermap_latitude="35.1798159"
+        app:navermap_longitude="129.0750222"
+        app:navermap_zoom="13"
+        app:navermap_mapType="Basic"
+
+        android:layout_margin="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/startText"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:hint="출발지"
+            />
+        <EditText
+            android:id="@+id/goalText"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:hint="도착지"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/navigationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+            android:background="@drawable/btn_blue"
+            android:text="길찾기"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+
+</LinearLayout>
